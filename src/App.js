@@ -5,6 +5,7 @@ import LeftBar from "./components/leftBar/LeftBar.jsx";
 import RightBar from "./components/rightBar/RightBar.jsx";
 import Home from "./pages/home/Home.jsx";
 import Profile from "./pages/profile/Profile.jsx";
+import "./style.scss"
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,16 +13,21 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext.js";
+import { AuthContext } from "./context/authContext.js";
 
 function App() {
 
-  const currentUser = true;
+  const {currentUser} = useContext(AuthContext);
+
+  const {darkMode} = useContext(DarkModeContext);
 
   const Layout = () => {
     
     return (
 
-      <div>
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <NavBar />
         <div style={{display: "flex"}}>
           <LeftBar />
