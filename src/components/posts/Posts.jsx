@@ -1,6 +1,7 @@
 import "./posts.scss"
 import User from "../../assets/user_icon_img.png"
-import Post from "../../assets/login_background.jpg"
+import PostImage from "../../assets/login_background.jpg"
+import Post from "../post/Post"
 
 
 
@@ -14,7 +15,7 @@ const Posts = () => {
             userID: 1,
             profilePic: {User}, 
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            img: {Post}
+            img: {PostImage}
         },
         {
             id: 2,
@@ -22,12 +23,15 @@ const Posts = () => {
             userID: 2,
             profilePic: {User}, 
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            img: "",
         },
     ]
 
     return (
         <div className="posts">
-            
+            {posts.map(post => (
+                <Post post={post} key={post.id}/>
+            ))}
         </div>
     )
 }
