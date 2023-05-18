@@ -45,7 +45,7 @@ const Profile = () => {
                             </div>
                             <div className="item">
                                 <LanguageIcon />
-                                <span>quaint.dev</span>
+                                <span>social.dev</span>
                             </div>
                         </div>
                         <button>Follow</button>
