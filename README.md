@@ -25,3 +25,6 @@ http://localhost:3000/
 
 http://localhost:3000/profile/1
 
+## Credits
+Credits to Lama Dev (https://www.youtube.com/@LamaDev) for the tutorial
+
