@@ -12,6 +12,8 @@ npm install
 
 npm start
 
+## Explore
+
 Four primary routes:
 
 
